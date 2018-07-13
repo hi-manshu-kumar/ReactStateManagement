@@ -5,6 +5,7 @@ export default class App extends Component {
   constructor(){
     super();
     //to show the value in html we need to create instance variable
+    this.myname = '';
     
   }
   takeInput(event){
@@ -13,7 +14,7 @@ export default class App extends Component {
 
       // now we want to show the value to the html file from input tag
       // we do this 
-   var myname = event.target.value;
+  // var myname = event.target.value;
   
   }
 
@@ -31,7 +32,9 @@ export default class App extends Component {
       {/*  1 When a event is function is call onChange(Event) the event is bind with a source (textbox)
            2 So 'this' is become a TextBox
            3 So we will bind our class object in early object by using bind function */}
-      
+      {/* NOw we have to add '.bind(this)' in the 'this.takeInput' to get this of class that will help to use myname THIS IS CALLED FUNCTION BINDING */}
+         <input type="text" onChange = {this.takeInput.bind(this)}/>
+     
       </div>
     );
   }
