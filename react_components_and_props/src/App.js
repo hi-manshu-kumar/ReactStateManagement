@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
+import {SearchBar} from './childs/searchbar/Searchbar';
+import {SearchList} from './childs/list/SearchList';
 import './App.css';
 
 class App extends Component {
   constructor(){
     super();
-    
+    this.searchValue = '';
+  }
+
+  takeInput(event){
+    this.searchValue = event.target.value;
+  }
+
+  doAjax(){
+    console.log("Do Ajax Call",this.searchValue);
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>Shop Demo</h1>
+        <SearchBar takeChildInput = { this.takeInput.bind(this)} parentfn = {this.doAjax.bind(this) } />
+      </div>
+    )
   }
 
   // computeIt(){
@@ -21,13 +40,6 @@ class App extends Component {
   //   );
   // }
 
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
 }
 
 export default App;

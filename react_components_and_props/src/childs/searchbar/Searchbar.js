@@ -1,8 +1,11 @@
 import React from 'react';
+
 export const SearchBar = (props) => {
-    return (
+    return(
         <div>
-            <label htmlFor=""></label>
+            <label htmlFor="">Search</label>
+            <input type="text" onChange = {props.takeChildInput} placeholder="type tp Search"/>
+            <button onClick = {props.parentfn}>Search</button>
         </div>
     )
-}
+} 
