@@ -21,7 +21,7 @@ class App extends Component {
     return(
       <div>
         <h1>Shop Demo</h1>
-        <SearchBar takeChildInput = { this.takeInput.bind(this)} parentfn = {this.doAjax.bind(this) } />
+        <SearchBar takeChildInput = {this.takeInput.bind(this)} parentfn = {this.doAjax.bind(this)} />
       </div>
     )
   }
