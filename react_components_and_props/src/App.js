@@ -21,6 +21,9 @@ class App extends Component {
     return(
       <div>
         <h1>Shop Demo</h1>
+        {/* Jo methods child ne chalane hai woh bhi React mein 
+        parent pe hi define honge uske reference ko pass krdo child ko 
+        aur onChange ya kisi keyboard ya mouse event par us method ko run krdenge */}
         <SearchBar takeChildInput = {this.takeInput.bind(this)} parentfn = {this.doAjax.bind(this)} />
       </div>
     )

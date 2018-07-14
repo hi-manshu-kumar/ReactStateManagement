@@ -5,7 +5,7 @@ export const SearchBar = (props) => {
         <div>
             {/* props are short form of properties .These are used for parent to child talk in components */}
             <label htmlFor="">Search</label>
-            <input type="text" onChange = {props.takeChildInput} placeholder="type tp Search"/>
+            <input type="text" onChange = {props.takeChildInput} placeholder="Yype to Search"/>
             <button onClick = {props.parentfn}>Search</button>
             {/* now these props are used by dumb components to share parent child talk 
                 these are used as props.attributeName  now these attributes contains funcitons and passes arguments to functions for child to parent talk 
